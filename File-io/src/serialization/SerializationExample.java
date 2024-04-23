@@ -27,14 +27,14 @@ public class SerializationExample {
 
     public static void main(String[] args) {
 
-        Employee employee = new Employee(2456,"Achint","achintk89@gmail.com",1500);
+        Employee employee = new Employee(2456,"Achint","achintk89@gmail.com",1500,"12345");
         System.out.println("Before Serialization");
         System.out.println(employee);
         serializeObject(employee);
 
-//        employee = (Employee) deSerializeObject("Employee.ser");
-//        System.out.println("After Serialization");
-//        System.out.println(employee);
+        employee = (Employee) deSerializeObject("Employee.ser");
+        System.out.println("After Serialization");
+        System.out.println(employee);
 
     }
 }

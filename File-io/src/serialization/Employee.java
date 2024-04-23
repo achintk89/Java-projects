@@ -4,20 +4,33 @@ import java.io.Serializable;
 
 public  class Employee implements Serializable {
 
+    private static final long serialVersionUID = 8486915410006252965L;
+
     private int id;  // non-negative
     private String name; // shouldn't be null or blank
     private String email; // shouldn't be null or blank
     private float salary; // non-negative
+    private transient String password;
 
-    public Employee(int id, String name, String email, float salary) {
+
+    public Employee(int id, String name, String email, float salary,String password) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.salary = salary;
+        this.password = password;
     }
 
     public Employee() {
         System.out.println("Employee Initialized");
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Employee(int id) {
@@ -69,7 +82,7 @@ public  class Employee implements Serializable {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", email=" + email +
-                ", salary=" + salary +
+                ", salary=" + salary + ", password=" + password +
                 '}';
     }
 }
