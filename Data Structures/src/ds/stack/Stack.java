@@ -10,7 +10,7 @@ public class Stack <T>{
 
     public Stack(int maxSize){
         this.maxSize=maxSize;
-        stackArray = new ArrayList<>(maxSize);
+        stackArray = new ArrayList<>();
         top = -1;
     }
 
