@@ -9,9 +9,10 @@ public class StackExample {
 //        java.util.Stack<Integer> stack = new java.util.Stack<>();
 //        System.out.println(stack.push(1));
 
-        Stack myStack = new Stack(2);
-        myStack.push("Hello");
-        myStack.push("world");
+        Stack<Integer> myStack = new Stack<Integer>(2);
+        myStack.push(3);
+        myStack.push(5);
+
 
 
         System.out.println(myStack.pop());
